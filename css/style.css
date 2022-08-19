@@ -770,7 +770,7 @@ footer {
 
 .backdrop {
     position: fixed;
-    z-index: 1;
+    /* z-index: 1; */
     top: 0;
     left: 0;
     width: 100%;
@@ -796,33 +796,17 @@ footer {
     transition: fill 250ms var(--cubic-bez-index);
 }
 
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 30px;
-    width: 30px;
-
-    min-width: 528px;
-    transform: translate(-50%, -50%);
-    width: 528px;
-    height: 581px;
-    background-color: var(--primary-white-color);
-    opacity: 1;
-    box-shadow: var(--card-shadow);
-    border-radius: 4px;
-    transition: opacity 250ms var(--cubic-bez-index), transform 250ms var(--cubic-bez-index),
-    box-shadow 250ms var(--cubic-bez-index) 250ms;
-}
-.close-button:hover,
-.close-button:focus {
-    fill: currentColor;
-}
 .close-button {
     background-color: var(--primary-white-color);
     height: 30px;
     width: 30px;
 }
+
+.close-button:hover,
+.close-button:focus {
+    fill: currentColor;
+}
+
 
 .hero-modal {
     background-color: var(--primary-white-color);
@@ -839,6 +823,9 @@ footer {
     padding: 40px;
 
     transform: translate(-50%, -50%) scale(1);
+    border-radius: 4px;
+    transition: opacity 250ms var(--cubic-bez-index), transform 250ms var(--cubic-bez-index),
+    box-shadow 250ms var(--cubic-bez-index) 250ms;
 
 }
 .hero-modal-title {
@@ -853,11 +840,13 @@ footer {
 }
 .hero-form-wrapper {
     margin-bottom: 20px;
+    
 }
 .hero-modal-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
+    
 }
 
 .hero-modal-wrapper:not(:last-child) {
@@ -872,6 +861,7 @@ footer {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
+   
 }
 
 .hero-modal-input {
@@ -887,6 +877,7 @@ footer {
     border-radius: 4px;
     outline: none;
     transition: border-color 250ms var(--cubic-bez-index);
+    
 }
 
 
@@ -932,7 +923,6 @@ footer {
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 30px;
 }
 
 .modal-rules {
@@ -970,14 +960,20 @@ footer {
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
-    /* text-decoration-skip-ink: none; */
+    text-decoration-skip-ink: none;
     color: var(--accent-color);
+    margin-left: 5px;
 }
 
 .hero-modal-submit {
     padding: 10px 55px;
     min-width: 200px;
-
+    display: block;
+    
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+   
     background-color: var(--accent-color);
     color: var(--primary-white-color);
     border-radius: 4px;
